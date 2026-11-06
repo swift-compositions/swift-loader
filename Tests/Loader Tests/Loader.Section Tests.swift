@@ -2,7 +2,9 @@ import Loader
 import Loader_Test_Support
 import Testing
 
-extension Loader.Section {
+enum `Loader.Section Tests` {}
+
+extension `Loader.Section Tests` {
     @Suite struct Tests {
         @Suite struct Unit {
             @Test func `type metadata sections are discoverable in the loaded image`() {

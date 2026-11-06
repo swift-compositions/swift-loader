@@ -2,7 +2,9 @@ import Loader
 import Loader_Test_Support
 import Testing
 
-extension Loader {
+enum `Loader Tests` {}
+
+extension `Loader Tests` {
     @Suite struct Tests {
 
         struct MetadataDiscoveryProbe {}
@@ -13,7 +15,7 @@ extension Loader {
 
                 #if canImport(Darwin)
                     #expect(
-                        found.contains { $0 == Loader.Tests.MetadataDiscoveryProbe.self },
+                        found.contains { $0 == `Loader Tests`.Tests.MetadataDiscoveryProbe.self },
                         "The probe type must be recoverable from the type metadata section"
                     )
                 #else
