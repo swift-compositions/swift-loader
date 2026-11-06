@@ -38,7 +38,7 @@ let package = Package(
         .target(
             name: "Loader",
             dependencies: [
-                "Type Metadata Shims",
+                .target(name: "Type Metadata Shims"),
                 .product(name: "Loader Vocabulary", package: "swift-loader-vocabulary"),
                 .product(
                     name: "POSIX Loader",
@@ -60,15 +60,15 @@ let package = Package(
         .target(
             name: "Loader Test Support",
             dependencies: [
-                "Loader"
+                .target(name: "Loader")
             ],
             path: "Tests/Support"
         ),
         .testTarget(
             name: "Loader Tests",
             dependencies: [
-                "Loader",
-                "Loader Test Support",
+                .target(name: "Loader"),
+                .target(name: "Loader Test Support"),
             ]
         ),
     ],
