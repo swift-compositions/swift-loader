@@ -7,7 +7,7 @@ enum `Loader Tests` {}
 extension `Loader Tests` {
     @Suite struct Tests {
 
-        struct MetadataDiscoveryProbe {}
+        fileprivate struct MetadataDiscoveryProbe {}
 
         @Suite struct Unit {
             @Test func `a type declared in this module is discoverable by name`() {
