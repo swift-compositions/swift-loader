@@ -8,7 +8,9 @@
             name: UnsafePointer<CChar>,
             in scope: Scope
         ) throws(Loader.Error) -> UnsafeRawPointer {
-            fatalError("Windows Loader.Symbol.lookup not yet implemented")
+            throw .symbol(
+                Loader.Message(ascii: "Loader.Symbol.lookup is not supported on Windows")
+            )
         }
     }
 #endif
