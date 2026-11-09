@@ -10,7 +10,7 @@ extension `Loader.Section Tests` {
             @Test func `type metadata sections are discoverable in the loaded image`() {
                 let bounds = Array(Loader.Section.all(.swiftTypeMetadata))
 
-                #if canImport(Darwin)
+                #if canImport(Darwin) || os(Linux)
                     #expect(
                         bounds.isEmpty == false,
                         "A Swift test binary always carries a type metadata section"

@@ -3,10 +3,8 @@
     import Loader_Test_Support
     import Testing
 
-    enum `Loader.Symbol Tests` {}
-
-    extension `Loader.Symbol Tests` {
-        @Suite struct Tests {
+    extension Loader.Symbol {
+        @Suite struct Lookup {
             @Suite struct Unit {
                 @Test func `lookup on Windows throws instead of trapping`() {
                     #expect(throws: Loader.Error.self) {
