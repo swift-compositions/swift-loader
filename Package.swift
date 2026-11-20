@@ -27,9 +27,9 @@ let package = Package(
             url: "https://github.com/swift-molecules/swift-loader-vocabulary.git",
             branch: "main"
         ),
-        .package(url: "https://github.com/swift-compositions/swift-posix.git", branch: "main"),
-        .package(url: "https://github.com/swift-compositions/swift-darwin.git", branch: "main"),
-        .package(url: "https://github.com/swift-compositions/swift-linux.git", branch: "main"),
+        .package(url: "https://github.com/swift-compositions/swift-posix.git", branch: "main", traits: ["Loader"]),
+        .package(url: "https://github.com/swift-compositions/swift-darwin.git", branch: "main", traits: ["Loader"]),
+        .package(url: "https://github.com/swift-compositions/swift-linux.git", branch: "main", traits: ["Loader"]),
     ],
     targets: [
         .target(
